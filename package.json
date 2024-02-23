@@ -1,10 +1,12 @@
 {
   "name": "vue-nouns-blockie",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.3",
+  "description": "Vue package that generates custom nouns avatar for web3 addresses and strings",
+  "main": "dist/vue-nouns-blockie.umd.js",
+  "module": "dist/vue-nouns-blockie.es.js",
+  "types": "dist/vue-nouns-blockie.d.ts",
   "scripts": {
-    "build": "vite build",
+    "build": "vite build && vue-tsc --emitDeclarationOnly --declaration && cp types/vue-nouns-blockie.d.ts dist/",
     "prepublishOnly": "npm run build"
   },
   "keywords": [],
@@ -15,10 +17,14 @@
     "@vue/compiler-sfc": "^3.4.19",
     "typescript": "^5.3.3",
     "vite": "^5.1.4",
-    "vue": "^3.4.19"
+    "vue": "3.4.19",
+    "vue-tsc": "^1.8.27"
   },
   "dependencies": {
     "@nouns/assets": "^0.5.0",
     "@nouns/sdk": "^0.4.0"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.19"
   }
 }

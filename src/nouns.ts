@@ -1,6 +1,7 @@
 // Import statements if you're using external libraries
 import { ImageData, getNounData, getNounSeedFromBlockHash } from "@nouns/assets";
 import { buildSVG } from "@nouns/sdk";
+import { fallBackNounStr } from "../utils";
 
 function hashString(str: string): number {
   let hash = 0;
