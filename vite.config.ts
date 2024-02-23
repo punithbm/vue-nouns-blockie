@@ -1,13 +1,23 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
+import dts from "vite-plugin-dts";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    dts({
+      insertTypesEntry: true,
+    }),
+    ,
+    tsconfigPaths(),
+    vue(),
+  ],
   build: {
+    sourcemap: true,
     lib: {
       entry: "src/NounsBlockie.vue",
-      name: "VueNounsBlockie",
-      fileName: (format) => `vue-nouns-blockie.${format}.js`,
+      name: "index",
+      fileName: () => `index.js`,
     },
     rollupOptions: {
       external: ["vue"],
