@@ -1,6 +1,6 @@
 {
   "name": "vue-nouns-blockie",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Vue package that generates custom nouns avatar for web3 addresses and strings",
   "exports": {
     ".": {
@@ -17,9 +17,9 @@
     "build": "vite build && vue-tsc --emitDeclarationOnly --declaration",
     "prepublishOnly": "npm run build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["vue", "nouns", "noun", "avatar", "nuxt"],
+  "author": "punithbm",
+  "license": "MIT",
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
     "@vue/compiler-sfc": "^3.4.19",
