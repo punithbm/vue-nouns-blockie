@@ -1,5 +1,5 @@
 <template>
-  <img :src="nounAvatarUrl" :alt="altText" :height="height" :width="width" :class="avatarShape" />
+  <img :src="nounAvatarUrl" :alt="alt" :height="height" :width="width" :class="avatarShape" />
 </template>
 
 <script setup lang="ts">
@@ -7,14 +7,14 @@ import { computed, defineProps } from 'vue';
 import { getNounAvatar } from './nouns';
 
 const props = defineProps<{
-  address: string;
+  input: string;
   height?: string;
   width?: string;
-  altText?: string;
+  alt?: string;
   shape?: 'square' | 'rounded' | 'circle';
 }>();
 
-const nounAvatarUrl = computed(() => getNounAvatar(props.address));
+const nounAvatarUrl = computed(() => getNounAvatar(props.input));
 const avatarShape = computed(() => {
   switch (props.shape) {
     case 'rounded':
