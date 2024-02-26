@@ -14,18 +14,15 @@
   },
   "dependencies": {
     "core-js": "^3.25.3",
-    "nuxt": "^2.15.8",
-    "vue": "^2.7.10",
+    "nuxt": "^3.10.1",
+    "vue": "3.4.19",
     "vue-nouns-blockie": "^1.0.8",
-    "vue-server-renderer": "^2.7.10",
-    "vue-template-compiler": "^2.7.10"
+    "vue-server-renderer": "^2.7.16",
+    "vue-template-compiler": "^2.7.16",
+    "vue-tsc": "^1.8.27"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.19.1",
-    "@nuxt/types": "^2.15.8",
-    "@nuxt/typescript-build": "^2.1.0",
-    "@nuxtjs/eslint-config-typescript": "^11.0.0",
-    "@nuxtjs/eslint-module": "^3.1.0",
     "eslint": "^8.24.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-nuxt": "^4.0.0",
