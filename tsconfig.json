@@ -1,13 +1,36 @@
 {
   "compilerOptions": {
-    "target": "es2016",   
-    "module": "commonjs",                        
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
+    "target": "esnext",   
+    "module": "esnext",   
     "strict": true,
-    "outDir": "./dist",
-    "skipLibCheck": true,
-    "declaration": true
+    "declaration": true,
+    "declarationDir": "dist/types",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "newLine": "lf",
+    "types": [
+      "node",
+      "vue"
+    ],
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ]
   },
   "include": ["src/**/*", "src/utils/**/*", "types/**/*"],
   "exclude": ["node_modules", "dist"]

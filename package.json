@@ -1,26 +1,41 @@
 {
   "name": "vue-nouns-blockie",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Vue package that generates custom nouns avatar for web3 addresses and strings",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.js",
-      "import": "./dist/index.js"
-    },
-    "./style.css": "./dist/style.css"
-  },
   "main": "./dist/index.js",
   "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/types/index.d.ts",
   "scripts": {
     "build": "vite build && vue-tsc --emitDeclarationOnly --declaration",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "prebuild": "rm -r ./dist"
   },
-  "keywords": ["vue", "nouns", "noun", "avatar", "nuxt"],
+  "keywords": [
+    "vue",
+    "nouns",
+    "noun",
+    "avatar",
+    "nuxt"
+  ],
+  "files": [
+    "dist/*"
+  ],
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+
+  "bugs": {
+    "url": "https://github.com/punithbm/vue-nouns-blockie/issues"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.*"
+  },
   "author": "punithbm",
   "license": "MIT",
   "devDependencies": {
+    "@babel/types": "^7.23.9",
+    "@types/node": "^20.11.20",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vue/compiler-sfc": "^3.4.19",
     "typescript": "^5.3.3",
