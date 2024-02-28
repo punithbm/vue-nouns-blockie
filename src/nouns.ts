@@ -1,7 +1,7 @@
-// Import statements if you're using external libraries
-import { ImageData, getNounData, getNounSeedFromBlockHash } from "@nouns/assets";
+import * as pkg from "@nouns/assets";
 import { buildSVG } from "@nouns/sdk";
 import { fallBackNounStr } from "./utils";
+const { getNounSeedFromBlockHash, getNounData, ImageData } = pkg;
 
 function hashString(str: string): number {
   let hash = 0;
