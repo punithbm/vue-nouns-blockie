@@ -1,16 +1,17 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import dts from "vite-plugin-dts";
-import tsconfigPaths from "vite-tsconfig-paths";
+import tsconfigPaths from "vite-tsconfig-paths";// if using JSX
+import vueJsx from '@vitejs/plugin-vue-jsx';
 
 export default defineConfig({
   plugins: [
+    vue(),
+    vueJsx(),
     dts({
       insertTypesEntry: true,
     }),
-    ,
     tsconfigPaths(),
-    vue(),
   ],
   build: {
     sourcemap: true,

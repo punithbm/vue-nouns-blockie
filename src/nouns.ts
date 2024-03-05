@@ -23,7 +23,7 @@ function padTo32Bytes(hexAddress: string): string {
   return `0x${cleanHexAddress}`;
 }
 
-export function getNounAvatar(inputText: string) {
+export default function getNounAvatar(inputText: string) {
   try {
     let paddedHexString;
     if (/^0x[a-fA-F0-9]{40}$/.test(inputText) || /^0x[a-fA-F0-9]{64}$/.test(inputText)) {

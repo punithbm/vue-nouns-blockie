@@ -1,1 +1,1 @@
-export declare function getNounAvatar(inputText: string): string;
+export default function getNounAvatar(inputText: string): string;

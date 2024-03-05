@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 import { computed, defineProps } from 'vue';
-import { getNounAvatar } from './nouns';
+import getNounAvatar from './nouns';
 
 const props = defineProps<{
   input: string;
