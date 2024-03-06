@@ -35,7 +35,7 @@ export default function getNounAvatar(inputText: string) {
     }
     const seed = getNounSeedFromBlockHash(paddedHexString, paddedHexString);
     const { parts, background } = getNounData(seed);
-    const svgBinary = buildSVG(parts, ImageData.palette, background);
+    const svgBinary = buildSVG(parts, ImageData?.palette ?? ["c5b9a1", "ffffff", "cfc2ab"], background);
     const svgBase64 = window.btoa(svgBinary);
     return `data:image/svg+xml;base64,${svgBase64}`;
   } catch (error) {

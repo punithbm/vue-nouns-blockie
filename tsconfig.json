@@ -32,6 +32,6 @@
       "scripthost"
     ]
   },
-  "include": ["src/**/*", "src/utils/**/*", "types/**/*"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src/**/*.ts", "src/**/*.vue"],
+  "exclude": ["node_modules"]
 }

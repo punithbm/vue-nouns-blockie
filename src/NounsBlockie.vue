@@ -3,8 +3,8 @@
 </template>
 
 <script setup lang="ts">
-import { computed, defineProps } from 'vue';
-import getNounAvatar from './nouns';
+import { defineProps } from 'vue';
+import useNounsBlockie from './useNounsBlockie';
 
 const props = defineProps<{
   input: string;
@@ -14,17 +14,7 @@ const props = defineProps<{
   shape?: 'square' | 'rounded' | 'circle';
 }>();
 
-const nounAvatarUrl = computed(() => getNounAvatar(props.input));
-const avatarShape = computed(() => {
-  switch (props.shape) {
-    case 'rounded':
-      return 'rounded';
-    case 'circle':
-      return 'circle';
-    default:
-      return 'square';
-  }
-});
+const { nounAvatarUrl, avatarShape } = useNounsBlockie(props);
 </script>
 
 <style scoped>
