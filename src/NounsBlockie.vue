@@ -5,14 +5,9 @@
 <script setup lang="ts">
 import { defineProps } from 'vue';
 import useNounsBlockie from './useNounsBlockie';
+import { NounsBlockieProps } from './NounsBlockieProps';
 
-const props = defineProps<{
-  input: string;
-  height?: string;
-  width?: string;
-  alt?: string;
-  shape?: 'square' | 'rounded' | 'circle';
-}>();
+const props = defineProps<NounsBlockieProps>();
 
 const { nounAvatarUrl, avatarShape } = useNounsBlockie(props);
 </script>

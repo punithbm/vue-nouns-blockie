@@ -3,12 +3,12 @@
     "target": "esnext",   
     "module": "esnext",   
     "strict": true,
-    "declaration": true,
-    "declarationDir": "dist/types",
+    "jsx": "preserve",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "importHelpers": true,
     "moduleResolution": "node",
+    "skipLibCheck": true,
     "experimentalDecorators": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -27,11 +27,9 @@
     },
     "lib": [
       "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
+      "dom"
     ]
   },
-  "include": ["src/**/*.ts", "src/**/*.vue"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "exclude": ["node_modules"]
 }

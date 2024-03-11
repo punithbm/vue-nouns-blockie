@@ -1,16 +1,5 @@
-declare const _default: import("vue").DefineComponent<__VLS_TypePropsToRuntimeProps<{
-    input: string;
-    height?: string | undefined;
-    width?: string | undefined;
-    alt?: string | undefined;
-    shape?: "square" | "rounded" | "circle" | undefined;
-}>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<__VLS_TypePropsToRuntimeProps<{
-    input: string;
-    height?: string | undefined;
-    width?: string | undefined;
-    alt?: string | undefined;
-    shape?: "square" | "rounded" | "circle" | undefined;
-}>>>, {}, {}>;
+import { NounsBlockieProps } from './NounsBlockieProps';
+declare const _default: import("vue").DefineComponent<__VLS_TypePropsToRuntimeProps<NounsBlockieProps>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<__VLS_TypePropsToRuntimeProps<NounsBlockieProps>>>, {}, {}>;
 export default _default;
 type __VLS_NonUndefinedable<T> = T extends undefined ? never : T;
 type __VLS_TypePropsToRuntimeProps<T> = {
